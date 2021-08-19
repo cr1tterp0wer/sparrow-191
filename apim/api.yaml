@@ -1,0 +1,21 @@
+openapi: 3.0.1
+info:
+  title: dapr
+  version: '1.0'
+servers:
+  - url: http://<SERVICE_NAME>.azure-api.net
+  - url: https://<SERVICE_NAME>.azure-api.net
+paths:
+  /echo:
+    post:
+      summary: Echo Service
+      description: Invoke service using Dapr API
+      operationId: echo
+      requestBody:
+        content:
+          application/json:
+            example:
+              message: hello
+      responses:
+        '200':
+          description: ''
