@@ -1,3 +1,4 @@
+
 ## For ease of use export a few vars for ease of use
 
 $ export APIM_SERVICE_NAME="<SERVICE_NAME>"
@@ -110,6 +111,7 @@ $ kubectl create configmap demo-apim-gateway-env --from-literal \
      "config.service.endpoint=https://${APIM_SERVICE_NAME}.management.azure-api.net/subscriptions/${AZ_SUBSCRIPTION_ID}/resourceGroups/${AZ_RESOURCE_GROUP}/providers/Microsoft.ApiManagement/service/${APIM_SERVICE_NAME}?api-version=2019-12-01"
 
 
+#### LOOK INTO THIS ####
 # We are ready to deploy the gateway + sanity check
 $ kubectl apply -f k8s/gateway.yaml
 $ kubectl get pods -l app=demo-apim-gateway
